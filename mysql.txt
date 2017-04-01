@@ -1,0 +1,4 @@
+1. Konversi SHP to MySQL
+   ogr2ogr -f "MySQL" MySQL:"geocoding,user=root,host=localhost,password=Azzahrah2014" -lco engine=MYISAM d:\map\desa\indo_desa_region.shp
+2. Update SRID geometry
+   UPDATE indo_desa_region SET SHAPE = ST_GEOMFROMGEOJSON(ST_ASGEOJSON(SHAPE), 2, 0) WHERE SRID(SHAPE) <> 0
