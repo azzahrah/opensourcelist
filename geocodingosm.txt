@@ -1,0 +1,3 @@
+download
+
+wget -c http://download.geofabrik.de/asia/indonesia-latest-free.shp.zip

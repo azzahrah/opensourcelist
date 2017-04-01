@@ -21,4 +21,6 @@
    static ip_address=192.168.1.3/24
    static routers=192.168.1.1
    static domain_name_servers=192.168.1.1 8.8.8.8
+ 8. FFMPEG Encoder
+   #nohup ffmpeg -f video4linux2 -framerate 25 -video_size 640x480 -i /dev/video0 -c:v libx264 -preset veryfast -tune zerolatency -f flv rtmp://localhost:1935/webcam/stream1
  
